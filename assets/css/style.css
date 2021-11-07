@@ -7,7 +7,7 @@
 :root {
 --primary: #351c75;
 --secondary: #d292ef;
---grey: #333;
+--grey: #a5a5a5;
 font-size: 62.5%;
 }
 
@@ -53,7 +53,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 70%;
   padding: 10px;
 }
 
@@ -63,7 +63,6 @@ section {
   width: 100%;
   padding: 10px;
 }
-
 
 .heading-title{
   font-size: 2.5rem;
@@ -98,11 +97,37 @@ section {
   box-shadow: 0 3px var(--grey);
   width: max-content;
   height: auto;
+}
 
+.quiz-section{
+  align-items: flex-start;
+  width: 60%;
+}
+
+.quiz-section-question {
+  text-align: left;
+}
+
+.answer-btn {
+  margin: 5px;
+  width: auto;
+  min-width: 150px;
+  padding: 10px 0;
+}
+
+.answer {
+  color: var(--grey);
+  font-size: 20px;
+  font-style: italic;
+  border-top: 1px solid var(--grey);
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 0;
 }
 
 .end-section{
   width: 40%;
+  align-items: flex-start;
 }
 
 .end-section-title {
@@ -117,6 +142,7 @@ section {
 .initials-form {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -129,19 +155,13 @@ section {
 }
 
 .form-group-text-wrapper{
-  flex: 1 1 150px;
+  width: 130px;
   display: flex;
   justify-content: flex-start;
 }
 
 .form-group-input-wrapper{
   flex: 1 1 50%;
-
-}
-
-.form-group-button-wrapper{
-  flex: 1 1 150px;
-
 }
 
 .form-group-text{
@@ -154,18 +174,27 @@ section {
   font-size: 1.8rem;
 }
 
-.initial-btn {
-
-}
-
 
 @media screen and (max-width: 1350px) {
   .end-section{
     width: 60%;
   }
+
+  .form-group-text-wrapper{
+    width: 130px;
+  }
+  
+  .form-group-input-wrapper{
+    flex: 1 1 40%;
+    min-width: 150px;
+  }
+  
+  .form-group-button-wrapper{
+    flex: 1 1 auto;
+    min-width: 100px;
+  }
+
 }
-
-
 
 @media screen and (max-width: 560px) {
   body{
@@ -174,7 +203,18 @@ section {
 
   .end-section{
     width: 70%;
-    min-width: 400px;
+  }
+
+  .form-group-text-wrapper{
+    width: 130px;
+  }
+  
+  .form-group-input-wrapper{
+    width: 150px;
+  }
+  
+  .form-group-button-wrapper{
+    width: 150px;
   }
 
 }
