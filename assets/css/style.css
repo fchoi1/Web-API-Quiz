@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+:root {
+--primary: #351c75;
+--secondary: #d292ef;
+--grey: #333;
+font-size: 62.5%;
+}
+
+body {
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 90%;
+}
+
+header .highscore-title {
+  font-size: 10px;
+}
+
+header .highscore-wrapper, header .timer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .highscore-title a{
+  text-decoration: none;
+  color:  var(--secondary);
+  font-size: 1.4rem;
+}
+
+header .timer-wrapper {
+  font-size: 1.6rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  padding: 10px;
+}
+
+.section-info{
+  text-align: center;
+  font-size: 1.6rem;
+  width: 100%;
+  padding: 10px;
+}
+
+
+.heading-title{
+  font-size: 2.5rem;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.start-section-title {
+  font-size: 2.5rem;
+}
+
+.start-section-info{
+  text-align: center;
+  font-size: 1.6rem;
+  width: 100%;
+  padding: 10px 50px;
+  padding-bottom: 20px;
+}
+
+.btn{
+  outline: none;
+  border: none;
+  display: inline-block;
+  padding: 7px 15px;
+  color: white;
+  background: var(--primary);
+  font-size: 1.6rem;
+  border-radius: 5px;
+  position: relative;
+  top: -3px;
+  box-shadow: 0 3px var(--grey);
+  width: max-content;
+  height: auto;
+
+}
+
+.end-section{
+  width: 40%;
+}
+
+.end-section-title {
+  text-align: left;
+}
+
+.end-section-info{
+  text-align: left;
+  padding: 1px 10px;
+}
+
+.initials-form {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.form-group-text-wrapper, .form-group-input-wrapper, .form-group-button-wrapper{
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+}
+
+.form-group-text-wrapper{
+  flex: 1 1 150px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.form-group-input-wrapper{
+  flex: 1 1 50%;
+
+}
+
+.form-group-button-wrapper{
+  flex: 1 1 150px;
+
+}
+
+.form-group-text{
+  font-size: 1.6rem;
+}
+
+.initials-input {
+  width: 100%;
+  height: 30px;
+  font-size: 1.8rem;
+}
+
+.initial-btn {
+
+}
+
+
+@media screen and (max-width: 1350px) {
+  .end-section{
+    width: 60%;
+  }
+}
+
+
+
+@media screen and (max-width: 560px) {
+  body{
+    min-width: 400px;
+  }
+
+  .end-section{
+    width: 70%;
+    min-width: 400px;
+  }
+
+}
