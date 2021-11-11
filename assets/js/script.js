@@ -79,7 +79,6 @@ var quizAnswerHandler = function(event){
         // disable all buttons
         allButtonEl.forEach(function(buttonEl){
             buttonEl.disabled = true;
-            console.log("disabled button")
         })
     
         // Enables button after 3 secs and creates next question
@@ -98,10 +97,9 @@ var checkAnswer = function(questionNumber, optionButtonEl){
     let answerEl = document.createElement("h3");
     answerEl.className = "answer";
 
-    let optionNumber = optionButtonEl.dataset.optionNumber; // Using dataset but not used but may be important at some point on
-    let answer = optionButtonEl.textContent;
-
-    if(answer === questionInfo[questionNumber].answer){
+    let optionNumber = optionButtonEl.dataset.optionNumber; 
+    console.log(typeof(optionNumber), optionNumber, typeof( questionInfo[questionNumber].answer,questionInfo[questionNumber].answer))
+    if(optionNumber == questionInfo[questionNumber].answer){
         score += 100; // Add 100 points for each correct answer
         answerEl.textContent = "This is the correct answer";
     }else{
@@ -143,6 +141,13 @@ var submitQuizHandler = function(event){
     endFormEl.reset();  // Reset Form
 }
 
+var restartHandler = function(event){
+    let element = event.target
+    if (element.matches(".main-menu-btn")){
+        window.location.href="index.html";
+    }
+};
+
 var saveScores = function(){
     console.log("saving scores")
     localStorage.setItem("scores", JSON.stringify(scoreList));
@@ -162,5 +167,5 @@ endEl.setAttribute('style', 'display: none');
 endFormEl.addEventListener("submit", submitQuizHandler);
 startEl.addEventListener("click", startQuizHandler);
 quizEl.addEventListener("click", quizAnswerHandler); // Check for which option is pressed
-
+endEl.addEventListener("click", restartHandler);
 loadScores();

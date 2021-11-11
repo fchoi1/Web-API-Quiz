@@ -95,7 +95,7 @@ section {
   position: relative;
   top: -3px;
   box-shadow: 0 3px var(--grey);
-  width: max-content;
+  width: fit-content;
   height: auto;
   cursor:pointer;
 }
@@ -115,9 +115,9 @@ section {
 
 .answer-btn {
   margin: 5px;
-  width: auto;
   min-width: 150px;
-  padding: 10px 0;
+  padding: 10px 10px;
+  text-align: left;
 }
 
 .answer {
@@ -149,7 +149,6 @@ section {
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 100%;
-
 }
 
 .form-group-text-wrapper, .form-group-input-wrapper, .form-group-button-wrapper { 
@@ -173,6 +172,12 @@ section {
 .form-group-text {
   font-size: 1.6rem;
 }
+
+.restart-btn-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
 
 .initials-input {
   width: 100%;
@@ -204,7 +209,6 @@ section {
   width: 100%;
   font-size: large;
   background-color: rgba(216, 137, 224, 0.8) ;
-  
 }
 
 .back-btn a {
@@ -306,6 +310,10 @@ footer {
   
   .form-group-button-wrapper {
     width: 150px;
+  }
+
+  .highscore-list-item {
+    font-size: 1.4rem;
   }
 
   footer {

@@ -25,11 +25,11 @@ var loadScoresArray = function(){ // Load scores into different array for sortin
 var displayScores = function(scoreArray){
     // If no scores, remove everything
     if (!scoreArray || scoreArray.length === 0){
-        console.log("Empty")
         let highScoreListChildEl = document.querySelector(".highscore-list").childNodes;
         highScoreListChildEl.forEach(function(children){
             highScoreListEl.remove(children);
         });
+        return;
     }
     var i = 1;
     for(scoreInfo of scoreArray){
@@ -45,10 +45,9 @@ var displayScores = function(scoreArray){
 }
 
 var clearScores = function(){
-    console.log("Clearing scores")
     var empty = [];
     displayScores(empty);
-    //localStorage.removeItem("scores");
+    localStorage.removeItem("scores");
 }
 
 // Return to main page
