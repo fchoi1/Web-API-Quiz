@@ -97,6 +97,7 @@ section {
   box-shadow: 0 3px var(--grey);
   width: max-content;
   height: auto;
+  cursor:pointer;
 }
 
 .quiz-section{
@@ -144,6 +145,7 @@ section {
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 100%;
+
 }
 
 .form-group-text-wrapper, .form-group-input-wrapper, .form-group-button-wrapper{
@@ -173,6 +175,36 @@ section {
   height: 30px;
   font-size: 1.8rem;
 }
+
+.highscores-section{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.highscore-title, .highscore-list{
+  width: 100%;
+  
+}
+
+.highscore-list-item{
+  margin: 5px;
+  padding: 3px;
+  padding-left: 10px;
+  width: 100%;
+  font-size: large;
+  background-color: rgba(216, 137, 224, 0.8) ;
+  
+}
+
+.back-btn a{
+  text-decoration: none;
+}
+
+.back-btn, .clear-scores-btn{
+  margin: 4px;
+}
+
 
 
 @media screen and (max-width: 1350px) {
