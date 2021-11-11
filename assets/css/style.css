@@ -39,7 +39,7 @@ header .highscore-wrapper, header .timer-wrapper {
   align-items: center;
 }
 
-header .highscore-title a{
+header .highscore-title a {
   text-decoration: none;
   color:  var(--secondary);
   font-size: 1.4rem;
@@ -57,14 +57,14 @@ section {
   padding: 10px;
 }
 
-.section-info{
+.section-info {
   text-align: center;
   font-size: 1.6rem;
   width: 100%;
   padding: 10px;
 }
 
-.heading-title{
+.heading-title {
   font-size: 2.5rem;
   width: 100%;
   text-align: center;
@@ -75,7 +75,7 @@ section {
   font-size: 2.5rem;
 }
 
-.start-section-info{
+.start-section-info {
   text-align: center;
   font-size: 1.6rem;
   width: 100%;
@@ -83,7 +83,7 @@ section {
   padding-bottom: 20px;
 }
 
-.btn{
+.btn {
   outline: none;
   border: none;
   display: inline-block;
@@ -100,7 +100,11 @@ section {
   cursor:pointer;
 }
 
-.quiz-section{
+.btn:hover {
+  background: var(--secondary);
+}
+
+.quiz-section {
   align-items: flex-start;
   width: 60%;
 }
@@ -126,7 +130,7 @@ section {
   padding: 10px 0;
 }
 
-.end-section{
+.end-section {
   width: 40%;
   align-items: flex-start;
 }
@@ -135,7 +139,7 @@ section {
   text-align: left;
 }
 
-.end-section-info{
+.end-section-info {
   text-align: left;
   padding: 1px 10px;
 }
@@ -148,7 +152,7 @@ section {
 
 }
 
-.form-group-text-wrapper, .form-group-input-wrapper, .form-group-button-wrapper{
+.form-group-text-wrapper, .form-group-input-wrapper, .form-group-button-wrapper { 
   padding: 10px 10px;
   display: flex;
   align-items: center;
@@ -156,17 +160,17 @@ section {
   width: auto;
 }
 
-.form-group-text-wrapper{
+.form-group-text-wrapper {
   width: 130px;
   display: flex;
   justify-content: flex-start;
 }
 
-.form-group-input-wrapper{
+.form-group-input-wrapper {
   flex: 1 1 50%;
 }
 
-.form-group-text{
+.form-group-text {
   font-size: 1.6rem;
 }
 
@@ -176,18 +180,24 @@ section {
   font-size: 1.8rem;
 }
 
-.highscores-section{
+.highscores-section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.highscore-title, .highscore-list{
+.highscore-title {
   width: 100%;
-  
 }
 
-.highscore-list-item{
+.highscore-list {
+  width: 100%;
+  list-style-type: none; 
+  margin: 5px 0 5px 0;
+
+}
+
+.highscore-list-item {
   margin: 5px;
   padding: 3px;
   padding-left: 10px;
@@ -197,56 +207,109 @@ section {
   
 }
 
-.back-btn a{
+.back-btn a {
   text-decoration: none;
 }
 
-.back-btn, .clear-scores-btn{
+.back-btn, .clear-scores-btn {
   margin: 4px;
 }
 
+footer {
+  font-size: 1.5rem;
+}
 
 
 @media screen and (max-width: 1350px) {
-  .end-section{
+  .end-section {
     width: 60%;
   }
 
-  .form-group-text-wrapper{
+  .form-group-text-wrapper {
     width: 130px;
   }
   
-  .form-group-input-wrapper{
+  .form-group-input-wrapper {
     flex: 1 1 40%;
     min-width: 150px;
   }
   
-  .form-group-button-wrapper{
+  .form-group-button-wrapper {
     flex: 1 1 auto;
     min-width: 100px;
   }
 
+  .quiz-section-question {
+    font-size: 1.8rem;
+  }
 }
 
 @media screen and (max-width: 560px) {
-  body{
-    min-width: 400px;
+  body {
+    min-width: 100px;
   }
 
-  .end-section{
+  section {
+    width: 100%;
+  }
+
+  header .highscore-title a {
+    font-size: 1.2rem;
+  }
+
+  header .timer-wrapper {
+    font-size: 1.4rem;
+  }
+
+  .heading-title {
+    font-size: 1.8rem;
+  }
+
+  .start-section-info {
+    text-align: center;
+    font-size: 1.4rem;
+    width: 100%;
+    padding: 5px 5px;
+    padding-bottom: 20px;
+  }
+
+  .quiz-section {
+    width: 100%;
+    align-items: center;
+  }
+
+  .quiz-section-question {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1.3rem;
+  }
+
+  .answer {
+    font-size: 15px;
+    margin: 5px 0;
+    padding: 5px 0;
+  }
+
+  .end-section {
     width: 70%;
   }
 
-  .form-group-text-wrapper{
+  .form-group-text-wrapper {
     width: 130px;
   }
   
-  .form-group-input-wrapper{
+  .form-group-input-wrapper {
     width: 150px;
   }
   
-  .form-group-button-wrapper{
+  .form-group-button-wrapper {
     width: 150px;
   }
 
+  footer {
+    font-size: 1rem;
+  }
+  
 }

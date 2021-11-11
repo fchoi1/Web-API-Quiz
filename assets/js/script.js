@@ -53,8 +53,8 @@ var createQuizQuestion = function(questionNumber){
         for(option of questionInfo[questionNumber].options){ // From other file (questionInfo.js)
             let optionButton = document.createElement("button");
             optionButton.className = "answer-btn btn";
-            optionButton.setAttribute("data-option-number", i);
-            optionButton.textContent = option;
+            optionButton.setAttribute("data-option-number", i); // not used but may be important some point on
+            optionButton.textContent = i + ". " + option;
             i++;
             quizEl.append(optionButton);
         }
@@ -98,7 +98,7 @@ var checkAnswer = function(questionNumber, optionButtonEl){
     let answerEl = document.createElement("h3");
     answerEl.className = "answer";
 
-    let optionNumber = optionButtonEl.dataset.optionNumber; // Using dataset
+    let optionNumber = optionButtonEl.dataset.optionNumber; // Using dataset but not used but may be important at some point on
     let answer = optionButtonEl.textContent;
 
     if(answer === questionInfo[questionNumber].answer){
@@ -140,9 +140,7 @@ var submitQuizHandler = function(event){
     scoreList.push(scoreListObj);
 
     saveScores(); // Save to local
-
-    // Reset Form
-    endFormEl.reset();
+    endFormEl.reset();  // Reset Form
 }
 
 var saveScores = function(){
@@ -150,7 +148,13 @@ var saveScores = function(){
     localStorage.setItem("scores", JSON.stringify(scoreList));
 }
 
-
+var loadScores = function(){
+    var loadedScores = localStorage.getItem("scores");
+    if (!loadedScores){
+        return false;
+    }
+    scoreList = JSON.parse(loadedScores);
+}
 
 // Hide End Section First
 endEl.setAttribute('style', 'display: none');
@@ -159,4 +163,4 @@ endFormEl.addEventListener("submit", submitQuizHandler);
 startEl.addEventListener("click", startQuizHandler);
 quizEl.addEventListener("click", quizAnswerHandler); // Check for which option is pressed
 
-
+loadScores();
