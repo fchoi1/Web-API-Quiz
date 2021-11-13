@@ -2,7 +2,7 @@
 
 ## Website
 
-[Take a coding quiz challenge and get a highscore!] (https://fchoi1.github.io/Web-API-Quiz/)
+[Take a coding quiz challenge and get a highscore!](https://fchoi1.github.io/Web-API-Quiz/)
 
 ## Technologies
 
