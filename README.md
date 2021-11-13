@@ -29,6 +29,4 @@ Made using HTML, CSS, Javascript, with focus on DOM, API and element manipulate 
 
 5. Restart the quiz or view the highscores
 
-    ![](./assets/images/highscores-readme.png)
-
-    
+    ![](./assets/images/highscores-readme.PNG)
